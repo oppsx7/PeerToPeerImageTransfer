@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uyF-Lb-9U9">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Transfer-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PeerToPeerImageTransfer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Qh-Mm-pgx">
+                                <rect key="frame" x="0.0" y="194" width="393" height="271"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="271" id="dne-vy-dA1"/>
+                                    <constraint firstAttribute="width" constant="393" id="lNs-Cd-Xvp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Connected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JE-ie-ZAi">
+                                <rect key="frame" x="0.0" y="103" width="393" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ioe-CC-ZfN">
+                                <rect key="frame" x="-0.66666666666665719" y="473" width="394.33333333333326" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="Gst-hp-kMc"/>
+                                    <constraint firstAttribute="width" constant="394" id="ecw-uL-Fdm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibe-m8-hGY">
+                                <rect key="frame" x="-0.66666666666665719" y="519" width="394.33333333333326" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="opJ-Hx-N4f"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="393" id="rKo-xf-swH"/>
+                                </constraints>
+                                <state key="normal" title="Send Image"/>
+                                <connections>
+                                    <action selector="sendImageAsResource:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jv4-nL-h6K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7JE-ie-ZAi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="35j-cE-qrR"/>
+                            <constraint firstItem="8Qh-Mm-pgx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4eE-Pl-vh4"/>
+                            <constraint firstItem="7JE-ie-ZAi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="78H-Sb-uM5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ibe-m8-hGY" secondAttribute="bottom" constant="272" id="EyP-MW-DgN"/>
+                            <constraint firstItem="ibe-m8-hGY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Pm2-RZ-l7g"/>
+                            <constraint firstItem="8Qh-Mm-pgx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ti8-nF-vvc"/>
+                            <constraint firstItem="ibe-m8-hGY" firstAttribute="top" secondItem="Ioe-CC-ZfN" secondAttribute="bottom" constant="8" id="W92-bt-QwP"/>
+                            <constraint firstItem="7JE-ie-ZAi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="dCA-Mu-R4P"/>
+                            <constraint firstItem="Ioe-CC-ZfN" firstAttribute="leading" secondItem="ibe-m8-hGY" secondAttribute="leading" id="kgB-Up-8p4"/>
+                            <constraint firstItem="7JE-ie-ZAi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nLK-ba-RP8"/>
+                            <constraint firstItem="Ioe-CC-ZfN" firstAttribute="top" secondItem="8Qh-Mm-pgx" secondAttribute="bottom" constant="8" id="sYL-7c-zoN"/>
+                            <constraint firstItem="Ioe-CC-ZfN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sjR-cF-it1"/>
+                            <constraint firstItem="7JE-ie-ZAi" firstAttribute="centerX" secondItem="8Qh-Mm-pgx" secondAttribute="centerX" id="xNA-7n-nw5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image Transfer" id="5fp-fR-F5N">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Dlh-ui-1Qg">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="fPU-pR-Mgu">
+                                <rect key="frame" x="285" y="4.6666666666666679" width="92" height="34.666666666666657"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Connect"/>
+                                <connections>
+                                    <action selector="didTapConnect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wVI-2f-IH9"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="connectionStateLabel" destination="7JE-ie-ZAi" id="ep3-OQ-HhO"/>
+                        <outlet property="imageView" destination="8Qh-Mm-pgx" id="Ba0-Z1-ASR"/>
+                        <outlet property="transferStatusLabel" destination="Ioe-CC-ZfN" id="kiC-eW-eYa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938.16793893129773" y="89.436619718309871"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8eu-hg-3b7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uyF-Lb-9U9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JBH-1c-Od6">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xgq-Dh-LIO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s5u-0j-GcA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
